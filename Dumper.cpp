@@ -16,7 +16,7 @@ int __stdcall DllMain (HMODULE Module, unsigned long Reason, void*)
     void* hacksThread = CreateThread(nullptr, 0, reinterpret_cast<LPTHREAD_START_ROUTINE>(Inject), nullptr, 0, nullptr);
     if (hacksThread == nullptr)
     {
-        MessageBox(nullptr, "Unable to create threads.", "Error", MB_OK | MB_ICONINFORMATION);
+        MessageBoxA(nullptr, "Unable to create threads.", "Error", MB_OK | MB_ICONINFORMATION);
         return 0;
     }
 
